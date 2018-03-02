@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quora</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <SCRIPT type="text/javascript" src="assets/js/main.js"></SCRIPT>
+    
+</head>
+
+<body onload="myFunction()">
+  <!-- navbar starts -->
+  <nav class="navbar navbar-default navbar-fixed" style="width:100%">
+    <div class="container-fluid" >
+      <div class="navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+         </button>
+       <span id="fa-que">
+         <i class="fa fa-question-circle gradient-icon fa-4x" aria-hidden="true"></i>  </span>
+
+
+    </div>
+
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+
+      <ul class="nav navbar-nav navbar-right ">
+        <li class="quora">QUORA</li>
+           <li class=""><a href="#" class="search"><form class="navbar-form navbar-right">
+             <div class="input-group">
+               <input type="text" class="form-control" placeholder="Search.....">
+               <div class="input-group-btn">
+                 <button class="btn btn-default" type="submit">
+                   <i class="glyphicon glyphicon-search"></i>
+                 </button>
+               </div>
+             </div>
+           </form></a></li>
+      </ul>
+   </div>
+ </div>
+</nav>
+
+<!-- post question section starts -->
+  <div class="container-fluid" style="padding: 0px;">
+    <div class="col-md-4 col-sm-6 col-xs-5"style="padding-left:0px;">
+      <!-- Trigger the modal with a button -->
+       <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Post Question</button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Post Question</h4>
+          </div>
+          <div class="modal-body">
+              <form class="cmxform" id="commentForm" method="post" action="">
+                <fieldset>
+                  <ul id="modal">
+                    <li>  <label for="Nametext" class="control-label"> Name</label>
+                         <input type="text" class="form-control" id="Nametext" required></li>
+
+                    <li><label for="Emailtext" class="control-label"> Email-Id</label>
+                        <input type="text" class="form-control" id="Emailtext" required="required"></li>
+
+                    <li><div class="row">
+                       <div class="col-md-5">
+                         <section class="">
+                           <select  id="select1" class="selectpicker " data-style="btn-primary">
+                           <option hidden>Select Subject</option>
+                           </select>
+                       </section>
+                   </div>
+                   <div class="col-md-1">
+                   </div>
+                   <div class="col-md-4">
+                     <section class="">
+                       <select  class="selectpicker " data-style="btn-primary">
+                       <option hidden>Select Semester</option>
+                       <option value="1">1</option>
+                       <option value="2">2</option>
+                       <option value="3">3</option>
+                       <option value="4">4</option>
+                       <option value="5">5</option>
+                       <option value="6">6</option>
+                       <option value="7">7</option>
+                       <option value="8">8</option>
+                       </select>
+                   </section>
+               </div>
+               <div class="col-md-2"></div>
+                </div>
+                     </li>
+
+                   
+
+                     <li><label for="messagetext" class="control-label">Type Your Question </label>
+                     <textarea class="form-control" id="messagetext" required></textarea></li>
+                     <div class="modal-footer">
+                       <button type="submit" class="btn btn-primary post" >Post</button>
+                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                     </div>
+                 </ul>
+               </fieldset>
+               </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-md-4 col-sm-1 col-xs-2">
+  </div>
+  <div class="col-md-4 col-sm-6 col-xs-7"style="padding-right: 0px;">
+    <section class="semester">
+    <div class="btn-group ">
+  <button type="button" class="btn btn-lg sembutton "> Semester </button>
+  <button type="button" class="btn btn-lg sembutton dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">Toggle Dropdown</span><i class="fa fa-caret-down" aria-hidden="true"></i>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">First</a></li>
+    <li><a class="dropdown-item" href="#">Second</a></li>
+    <li><a class="dropdown-item" href="#">Third</a></li>
+    <li><a class="dropdown-item" href="#">Fourth</a></li>
+    <li><a class="dropdown-item" href="#">Fifth</a></li>
+    <li><a class="dropdown-item" href="#">Sixth</a></li>
+    <li><a class="dropdown-item" href="#">Seventh</a></li>
+    <li><a class="dropdown-item" href="#">Eighth</a></li>
+  </ul>
+  </div>
+  </section>
+  </div>
+  </div>
+  <!-- post question section ends -->
+
+
+
+ <br>
+
+<!-- panel -->
+<div class="container-fluid">
+    <div class="row" >
+        <div class="panel with-nav-tabs panel-default">
+                <div class="panel-heading" style="width:99.9%">
+                        <ul class="nav nav-tabs">
+                            <li class="active"> <a href="#tab1default" data-toggle="tab" aria-expanded="true">Recent</a></li>
+                            <li>                <a href="#tab2default" data-toggle="tab" aria-expanded="true">Trending</a></li>
+                            <li class="popular"><a href="#tab3default" data-toggle="tab" aria-expanded="true">Popular</a></li>
+
+                        </ul>
+                </div>
+                <div class="panel-body">
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="tab1default" ></div>
+
+                        <div class="tab-pane fade " id="tab2default" ></div>
+                         
+                        <div class="tab-pane fade" id="tab3default"></div>
+                    </div>
+                </div>
+          </div>
+    </div>
+</div>
+
+
+
+ <div class="pagination" id="paginationn">
+   <a href="#">&laquo;</a>
+   <a class="active" href="#">1</a>
+   <a  href="#">2</a>
+   <a href="#">3</a>
+   <a href="#">4</a>
+   <a href="#">5</a>
+   <a href="#">6</a>
+   <a href="#">&raquo;</a>
+ </div>
+ &nbsp;
+ <hr>
+
+
+
+
+
+<!-- tab section ends -->
+<script>
+
+</script>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
